@@ -204,7 +204,7 @@ export default function LandingPage() {
             Start comparing colleges, reading reviews, and connecting with students now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/signup" 
+            <Link href="pages/signup" 
               className="group bg-white text-blue-600 font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
               Sign Up for Free
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

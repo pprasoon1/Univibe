@@ -8,16 +8,16 @@ connectDB();
 export async function POST(req) {
     try {
         
-        const {username, password} = await req.json();
+        const {email, password} = await req.json();
 
-        if(!username || !password){
+        if(!email || !password){
             return NextResponse.json(
                 { error: "All fields are required" },
                 { status: 400 }
             )
         }
 
-        const user = await User.findOne({username});
+        const user = await User.findOne({email});
         
         if(!user){
             return NextResponse.json(
