@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Search, MapPin, Star, GraduationCap, Users, ArrowUpRight, SlidersHorizontal } from 'lucide-react';
+import Image from 'next/image';
 
 // Mock data for colleges
 const colleges = [
@@ -144,10 +145,12 @@ const OnboardingPage = () => {
                             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                         >
                             <div className="relative">
-                                <img
+                                <Image
                                     src={college.image}
                                     alt={college.name}
                                     className="w-full h-48 object-cover"
+                                    width={500} // Set appropriate dimensions
+                                    height={192}
                                 />
                                 {college.featured && (
                                     <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -255,8 +258,8 @@ const OnboardingPage = () => {
                         }
                     ].map((testimonial, index) => (
                         <div key={index} className="border p-4 bg-white rounded-lg shadow-sm">
-                            <p className="italic">"{testimonial.testimonial}"</p>
-                            <p className="mt-2 font-semibold">- {testimonial.name}</p>
+<p className="italic">&quot;{testimonial.testimonial}&quot;</p>
+<p className="mt-2 font-semibold">- {testimonial.name}</p>
                         </div>
                     ))}
                 </div>

@@ -186,7 +186,7 @@ export default function LandingPage() {
                 <div className="mb-6">
                   <Star className="w-8 h-8 text-yellow-400 mx-auto" />
                 </div>
-                <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-6 italic leading-relaxed">&quot;{testimonial.text}&quot;</p>
                 <h4 className="text-blue-600 font-semibold">{testimonial.name}</h4>
                 <span className="text-gray-400 text-sm">{testimonial.role}</span>
               </div>
