@@ -36,7 +36,7 @@ export async function POST(req) {
         const token = jwt.sign({
             email: newUser.email,
             id: newUser._id,
-        }, pprasoon, 
+        }, "pprasoon", 
             {expiresIn: "15d" }
         )
 

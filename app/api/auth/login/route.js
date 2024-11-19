@@ -29,14 +29,14 @@ export async function POST(req) {
         if (user.password !== password){
             return NextResponse.json(
                 {error: "Invalid credentials"},
-                {status: "401"}
+                {status: 401}
             )
         }
 
         const token = jwt.sign({
             email: user.email,
             id: user._id,   
-        },pprasoon,
+        },"pprasoon",
     { expiresIn: "15d",}
 )
 
