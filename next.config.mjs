@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
           'www.highereducationdigest.com', 
           'encrypted-tbn0.gstatic.com',
-          'assets.simpleviewinc.com', // Add this domain
+          'assets.simpleviewinc.com',
+          'https://www.mycampusreview.com/' // Add this domain
         ],
       },
 };
