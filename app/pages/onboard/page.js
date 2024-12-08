@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; // Import axios
 import { Search, MapPin, Star, Users, ArrowUpRight, SlidersHorizontal } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const OnboardingPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -154,10 +155,12 @@ const OnboardingPage = () => {
                                         <span className="text-sm text-gray-500">No tags available</span> // fallback message
                                     )}
                                 </div>
+                                <Link href={`/pages/collegeinfo/${colleges.name}`}>
                                 <button className="mt-6 w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                                     View Details
                                     <ArrowUpRight className="h-4 w-4" />
                                 </button>
+                                </Link>
                             </div>
                         </div>
                     ))}
